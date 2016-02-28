@@ -1,0 +1,22 @@
+DESCRIPTION:
+This is the GO/goroutine implementation of Diffie-Hellman discussed in
+Thursday's (10/22/2015) lecture
+
+FILES: 
+Alice.go
+Bob.go
+README (this!)
+
+
+USAGE:
+1. Run Alice
+2. Run Bob in a separate terminal
+3. Enter private key for Bob
+4. Switch to Alice's terminal and enter private key for Alice
+5. Observe the shared secret key displayed on respective terminals which
+are calculated by them locally
+
+TEST:
+Based on the private keys, public keys are calculated exchanged. Once
+public keys are received, shared secret key is calculated locally. This
+has to be same for both - Alice & Bob.

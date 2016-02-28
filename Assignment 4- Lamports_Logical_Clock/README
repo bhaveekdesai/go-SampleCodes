@@ -1,0 +1,29 @@
+DESCRIPTION:
+This is the GO/goroutine implementation of Laport's Logical clock discussed in
+the Thursday's (9/24/2015) lecture. Ther server starts its local clock
+once a client joins. The client starts its local clock once it is started.
+When messages are received by client from server, it checks the servertime
+at the time of sending the message, and its local time when it received
+the message; then compares the two to make necessary adjustment in order
+to ensure that time(received) > time(sent).
+
+FILES: 
+Client.go
+Server.go
+README (this!)
+
+USAGE:
+1. Run the server first and then a client
+2. Pass no commandline arguments for client if both server and client are
+running on same system. Pass server IP as commandline argument when
+running client from different machine
+3. Start sending messages from server
+
+TEST:
+1. Send messages from server while the client is up and see them displayed
+instantly on client.
+2. Wait few seconds and send another message from server.
+
+Since the local clocks of client and server have been set to increment at
+a different rate on purpose, the Lamport's Logical Clock implementation
+is easy to witness in action in this program.

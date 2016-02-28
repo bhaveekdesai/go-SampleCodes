@@ -1,0 +1,14 @@
+DESCRIPTION:
+This is the GO/goroutine implementation of Mutual Exclusive Locks (Mutex)
+discussed in the Tuesday's (9/29/2015) lecture. A masterdata is maintained
+and any read/write thread accessing it will acquire a lock and release once
+read/write operation is completed. GO has inbuilt Mutex lock feature
+which makes this implementation fairly straightforward
+
+FILES: 
+mutex.go
+README (this!)
+
+USAGE:
+1. Open terminal and run:
+go run mutex.go

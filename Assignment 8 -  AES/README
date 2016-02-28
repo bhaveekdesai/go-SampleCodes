@@ -1,0 +1,19 @@
+DESCRIPTION:
+This is the GO implementation of AES discussed in
+Thursday's (10/27/2015) lecture using inbuilt go-libraries
+
+FILES: 
+aes.go
+README (this!)
+
+
+USAGE:
+1. Run aes.go
+2. Enter message
+
+TEST:
+Based on the private key and initialization vector (hardcoded), message
+is encrypted using AES encryption
+
+REFERENCES:
+1. Golang docs: https://golang.org/pkg/crypto/aes/

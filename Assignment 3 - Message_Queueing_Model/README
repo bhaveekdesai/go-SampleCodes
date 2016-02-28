@@ -1,0 +1,28 @@
+DESCRIPTION:
+This is the GO/goroutine implementation of Message Queueing discussed in
+the Tuesday's (9/15/2015) lecture. One of the modern implementations of
+this is "push notifications" where if client is up, it receives messages
+directly from the server without explicitly making a request. If the
+client is passive, server maintains a message queue, kind of a buffer.
+And once the client is up, the messages in the queue are delivered to it.
+I have used JSON as a message queue instead of a string buffer for ease
+of data structure and passing.
+
+FILES: 
+Client.go
+Server.go
+README (this!)
+
+USAGE:
+1. Run the server first and then a client
+2. Pass no commandline arguments for client if both server and client are
+running on same system. Pass server IP as commandline argument when
+running client from different machine
+3. Start sending messages from server
+
+TEST:
+1. Send messages from server while the client is up and see them displayed
+instantly on client. [Push Notification]
+2. In between the connection, drop the client. Continue sending messages
+from server; then bring the client up and see the pending messages.
+[Persistent Message Queue]

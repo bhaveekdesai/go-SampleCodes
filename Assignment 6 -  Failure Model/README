@@ -1,0 +1,15 @@
+DESCRIPTION:
+This is the GO/goroutine implementation of Timed Failure
+
+FILES: 
+Server.go
+Client.go
+README (this!)
+
+
+USAGE:
+1. Run the server first and then one or more clients from the same design set (eg. thickServer and one or more instances of thinClient)
+2. Pass no commandline arguments for client if both server and client are running on same system. Pass server IP as commandline argument when running client from different machine.
+
+TEST:
+If response from server is delayed, no response will be printed.

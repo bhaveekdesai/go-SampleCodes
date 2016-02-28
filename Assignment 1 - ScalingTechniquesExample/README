@@ -1,0 +1,23 @@
+DESCRIPTION:
+This is the GO/goroutine implementation of one of the scaling techniques explained in the Tuesday's (9/1/2015) lecture 
+wherein in a server-client pair, a bad design is where form checking happens at the server space and a good 
+design is when form checking happens at client space. This not only reduces latency, but also reduces pressure 
+off the server. In this small example, I try to demonstrate this by validating email ID at client space and at 
+server space. 
+
+FILES: 
+Bad Design:
+	thickServer.go
+	thinClient.go
+
+Good Design:
+	thinServer.go
+	thickClient.go
+
+USAGE:
+1. Run the server first and then one or more clients from the same design set (eg. thickServer and one or more instances of thinClient)
+2. Pass no commandline arguments for client if both server and client are running on same system. Pass server IP as commandline argument when running client from different machine.
+
+TEST:
+Every value is a test of this functionality as with every response, latency is displayed on terminal which gives the real-time response time taken by the server.
+In most of the cases, thickServer will take more time to respond than thinServer.

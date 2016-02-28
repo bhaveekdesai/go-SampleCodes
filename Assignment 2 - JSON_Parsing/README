@@ -1,0 +1,27 @@
+DESCRIPTION:
+This is the GO/goroutine implementation of JSON parsing discussed in the 
+Thursday's (9/10/2015) lecture while explaining one of the modern ways to
+communicate among systems using serialized strings. This is just a fun 
+program I built on my previous SclaingTechniquesExample submission as I 
+wanted to get my hands dirty with handling JSON messages in golang. Client 
+connects server, sends command and server parses its local JSON file, sends
+it as a response to client who in turn based on the struct defined, 
+unmarshals the JSON response and displays output on screen.
+
+FILES: 
+Client.go
+Server.go
+Mailbox.json
+README (this!)
+
+USAGE:
+1. Run the server first and then one or more clients
+2. Pass no commandline arguments for client if both server and client are
+running on same system. Pass server IP as commandline argument when
+running client from different machine.
+
+TEST:
+Mess with the json file locally and see different outputs!
+If the file has content structured in correct format, it will be displayed;
+else, client will tell you the file is corrupt!! (Yes, the file is not corrupt,
+but poor client can't map incorrect headers you see)
